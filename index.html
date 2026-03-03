@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shwapno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"/>
+     <link rel="icon" type="image/png" href="favicon.png">
+
+    <style type="text/css">
+      
+      .banner-sec {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+  }
+
+  .banner-sec img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+  }
+
+  .banner-sec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1; 
+  }
+
+  .modal-header img{
+      position: absolute;
+      left: 40%;
+      top: -45px;
+  }
+
+  .modal-header {
+    border-bottom: 0px;
+}
+.close-btn{
+    position: absolute;
+    right: 10px;
+    color: red;
+    font-size: 20px;
+}
+
+.modal-body-cont p{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.modal.show .modal-dialog {
+    width: 428px;
+}
+.btn-Login{
+    color: #fff;
+    background-color: #df0000;
+    border-color: #df0000;
+    border-radius: 23px;
+    font-weight: 600;
+}
+
+.btn-Login:hover{
+  color: #fff;
+  background-color: #df0000;
+    border-color: #df0000;
+}
+.btn-Login:focus{
+  color: #fff;
+  background-color: #df0000;
+    border-color: #df0000;
+}
+
+
+
+
+
+
+.or-sign{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.g-btn{
+    border: 1px solid #a9a9a9;
+    padding: 6px 12px;
+    border-radius: 40px;
+    display: inline-block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+
+.g-btn img{
+    width: 22px;
+}
+
+.g-btn:hover, .g-btn:focus {
+    background: #f0f5fe;
+    border-color: rgb(210, 227, 252);
+}
+
+
+.phone-input-container{
+    display: flex;
+}
+
+.flag{
+    border: 1px solid #dee2e6;
+    padding: 10px 12px;
+    display: flex;
+    gap: 4px;
+}
+.flag img {
+    width: 23px;
+    height: 15px;
+    margin-top: 3px;
+}
+
+.flag i{
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.phone-box{
+    position: relative;
+    width: 100%;
+}
+
+.phone-box span{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.tel-input{
+    height: 40px;
+    padding-left: 45px;
+    border-radius: 0px;
+    font-weight: 500;
+    font-size: 15px;
+}
+      
+
+ @media only screen and (max-width: 767px) {
+
+  .banner-sec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('mbg.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1; 
+  }
+
+   .modal.show .modal-dialog {
+      width: auto;
+  }
+  .modal-body-cont p {
+    font-size: 15px;
+  }
+  }
+    </style>
+
+  </head>
+  <body>
+    <div class="banner-sec">
+      <!-- <img src="bg.png" alt="banner"> -->
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:block;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="logo_circle.svg" alt="logo">
+            <div class="close-btn"><i class="bi bi-x-lg"></i></div>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body-cont">
+              <p class="mb-1 text-center">Sign in to get best online experience</p>
+              <form>
+                <div class="phone-input-container mb-3">
+                    <div class="flag">
+                      <img src="bangladesh.png">
+                      <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="phone-box">
+                      <span>+880</span>
+                      <input type="tel" class="tel-input form-control" placeholder="1XXXXXXXXXX">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-Login form-control">Login</button>
+                
+              </form>
+            </div>
+            <div class="text-center">
+              <p class="or-sign">or, sign in with</p>
+              <div class="g-btn">
+                <img src="google-color.png" alt="google">
+                <span>Sign in</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
